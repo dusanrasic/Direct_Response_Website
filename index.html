@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="https://directresponse.dusanrasic.rs/img/icon.ico" type="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Direct response, Simple, yet elegant messaging app. Minimal design." />
+  <meta name="keywords" content="website , project, dusan, rasic, dusan rasic, web design, direct, response, direct response, messaging app" />
+
+  <meta name="author" content="Dusan Rasic" />
+  <meta name="copyright" content="reserved" />
+  <meta name="application-name" content="Direct Response" />
+
+  <!-- for Facebook -->
+  <meta property="og:title" content="Direct Response" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://directresponse.dusanrasic.rs" />
+  <meta property="og:description" content="Direct response, Simple, yet elegant messaging app" />
+  <meta property="og:image" content="img/Home.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+
+  <!-- for Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Direct Response" />
+  <meta name="twitter:description" content="Direct response, Simple, yet elegant messaging app" />
+
+  <!-- for Dublin Core-->
+  <meta name="Description" content="Direct response, Simple, yet elegant messaging app">
+  <meta name="DC.Title" content="Direct Response">
+  <meta name="DC.Creator" content="Dusan Rasic">
+  <meta name="DC.Subject" content="Web Design">
+  <meta name="DC.Description" content="Direct response, Simple, yet elegant messaging app">
+  <meta name="DC.Publisher" content="Dusan Rasic">
+  <meta name="DC.Date" content="28.6.2018">
+  <meta name="DC.Language" content="english">
+  <meta name="DC.Rights" content="reserved">
+  <title>Direct Response | Messaging App</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer="defer" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+  <script defer="defer" src="js/script.min.js" charset="utf-8"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101116197-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-101116197-3');
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+    (document, 'script', 'facebook-jssdk'));
+    window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+    }
+    (document, "script", "twitter-wjs"));
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <ul class="navigation">
+      <li data-link="#home">Home</li>
+      <li data-link="#gallery">Gallery</li>
+      <li data-link="#about">About</li>
+      <li data-link="#contact">Contact</li>
+    </ul>
+  </nav>
+  <section class="landing-section" id="home">
+    <div class="wrapper">
+      <div class="logo">
+        <div class="ltr1"><h1>Direct</h1></div>
+        <div class="ltr2"><h1>Response</h1></div>
+      </div>
+      <div class="aditional-text">
+        <div class="ltr">Simple, yet modern messaging app.</div>
+      </div>
+    </div>
+  </section>
+  <section class="gallery" id="gallery">
+    <div class="images">
+      <div class="img image1"><img src="https://directresponse.dusanrasic.rs/img/LandingCon.PNG" alt="LandingCon"></div>
+      <div class="img image2"><img src="https://directresponse.dusanrasic.rs/img/Home.PNG" alt="Home"></div>
+      <div class="img image3"><img src="https://directresponse.dusanrasic.rs/img/LandingConMess.PNG" alt="LandingConMess"></div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="wrapper">
+      <div class="title">About</div>
+      <div class="content">
+        This is Simple, yet modern messaging app. Project is written in C#.
+        It uses duplex comunication with web service. GUI is done with WPF.
+        Web service with WCF. App is still in beta version.
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrapper">
+      <div class="title">Contact us</div>
+      <div class="content">
+        <div class="header">We are open to any suggestion. Please fill the form.</div>
+        <form class="form" method="post">
+          <input type="text" placeholder="Subject" name="tbSubject" id="tbSubject">
+          <input type="text" placeholder="Your Email" name="tbEmail" id="tbEmail">
+          <textarea class="message" placeholder="Message" id="taContent"></textarea>
+          <button type="submit" class="btnSubmit" id="btnSubmit" name="btnSubmit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

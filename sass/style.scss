@@ -1,0 +1,475 @@
+@import "reset";
+@import "mixins";
+@font-face {
+  font-family: "CODE Light";
+  src: url("../fonts/Code/CODE Light.otf");
+}
+@font-face{
+  font-family: "Roboto";
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+$background-color: #263238;
+$gray: #fbfbfb;
+$cyan: #00fbfb;
+body{
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  background-color: $background-color;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden;
+  //margin-left: -5%;
+  .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    transition:all 0.5s;
+    box-sizing: border-box;
+    padding-right: 2%;
+    z-index: 3;
+    @include medium_small_screen{
+      padding-right: 5%;
+    }
+    .navigation{
+      width: 30%;
+      height: 100%;
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      @include large_screen{
+        width: 30%;
+      }
+      @include medium_screen{
+        width: 55%;
+      }
+      @include small_screen{
+        width: 100%;
+      }
+      li{
+        height: 50%;
+        width: 24%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Code Light';
+        font-size: 0.7rem;
+        color: $gray;
+        text-decoration: none;
+        background-color: transparent;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 5px;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        &:hover{
+          color: $cyan;
+          border-bottom: 1px solid $cyan;
+        }
+        @include extra_small_screen{
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+  .landing-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    .wrapper{
+      position: relative;
+      width: 70%;
+      height: 20%;
+      @include medium_screen{
+        width: 95%;
+      }
+      @include small_screen{
+        width: 100%;
+      }
+      .logo{
+        position: relative;
+        width: 100%;
+        height: 80%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        box-sizing: border-box;
+        margin-left: -5%;
+        @include medium_screen{
+          margin-left: -5%;
+        }
+        @include small_screen{
+          margin-left: -7%;
+        }
+        @include medium_small_screen{
+          margin-left: -8%;
+        }
+        .ltr1{
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          h1{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 100%;
+            font-family: "Code Light";
+            font-weight: lighter;
+            font-size: 2.5rem;
+            color: $gray;
+            @include small_screen{
+            font-size: 1.5rem;
+            }
+            @include extra_small_screen{
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .ltr2{
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          h1 {
+            display:flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 100%;
+            font-family: "Code Light";
+            font-weight: lighter;
+            font-size: 2.5rem;
+            color: $cyan;
+            @include small_screen{
+              font-size: 1.5rem;
+            }
+            @include extra_small_screen{
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+      .aditional-text{
+        position: relative;
+        width: 100%;
+        height: 20%;
+        background-color: transparent;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $gray;
+        box-sizing: border-box;
+        padding-left: 3%;
+        @include small_screen{
+          padding-left: 0;
+        }
+        .ltr{
+          font-size: 0.8rem;
+          font-family: "Code Light";
+          font-weight: lighter;
+          @include small_screen{
+            font-size: 0.5rem;
+          }
+          @include extra_small_screen{
+            font-size: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+  .gallery{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    .images{
+      position: relative;
+      width: 90%;
+      height: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      box-sizing: border-box;
+      background-color: transparent;
+      @include large_screen{
+        height: 70%;
+      }
+      @include medium_screen{
+        height: 50%;
+      }
+      @include extra_small_screen{
+        height: 40%;
+      }
+      .img{
+        position: relative;
+        width: 50%;
+        height: 98%;
+        box-sizing: border-box;
+      }
+      .image1{
+        position: relative;
+        transform: scale(1);
+        z-index: 1;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .image2{
+        position: relative;
+        transform: scale(1.01);
+        z-index: 2;
+        margin-left: -20%;
+        margin-right: -20%;
+        box-shadow: 0 0 18px rgb(0,0,0.5);
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .image3{
+        position: relative;
+        transform: scale(1);
+        z-index: 1;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+      position: relative;
+      width: 80%;
+      height: 80%;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      .title{
+        position: relative;
+        width: 100%;
+        height: 40%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Code Light";
+        font-weight: lighter;
+        font-size: 2.5rem;
+        color: $cyan;
+        box-sizing: border-box;
+        @include small_screen{
+          font-size: 1.5rem;
+        }
+        @include extra_small_screen{
+          font-size: 1rem;
+        }
+      }
+      .content{
+        position: relative;
+        width: 100%;
+        height: 60%;
+        background-color: transparent;
+        font-family: "Roboto", sans-serif;
+        color: $gray;
+        font-size: 0.8rem;
+        font-weight: 100;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 2% 10% 10% 5%;
+        @include small_screen{
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+  .contact{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+      position: relative;
+      width: 80%;
+      height: 90%;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      .title{
+        position: relative;
+        width: 100%;
+        height: 20%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Code Light";
+        font-weight: lighter;
+        font-size: 2.5rem;
+        color: $cyan;
+        @include small_screen{
+          font-size: 1.5rem;
+        }
+        @include extra_small_screen{
+          font-size: 1rem;
+        }
+      }
+      .content{
+        position: relative;
+        width: 100%;
+        height: 80%;
+        background-color: transparent;
+        text-align: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .header {
+          position: relative;
+          width: 100%;
+          height: 10%;
+          font-family: "Roboto", sans-serif;
+          color: $gray;
+          font-size: 0.8rem;
+          font-weight: 100;
+          background-color: transparent;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include small_screen{
+            font-size: 0.5rem;
+          }
+        }
+        .form{
+          position: relative;
+          width: 100%;
+          height: 90%;
+          background-color: transparent;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          input{
+            position: relative;
+            width: 50%;
+            height: 5%;
+            box-sizing: border-box;
+            margin: 2%;
+            padding: 0.5%;
+            font-size: 0.3em;
+            font-weight: lighter;
+            background-color: rgba(0,0,0,0);
+            border: none;
+            border-bottom: 1px solid $cyan;
+            color: $cyan;
+            &:focus{
+              border: none;
+            }
+            @include medium_screen{
+              width: 70%;
+              height: 10%;
+            }
+          }
+          .message{
+            position: relative;
+            width: 50%;
+            height: 5%;
+            max-width: 50%;
+            min-width: 50%;
+            min-height: 5%;
+            max-height: 40%;
+            box-sizing: border-box;
+            margin: 2%;
+            padding: 0.2%;
+            font-size: 0.3em;
+            font-weight: lighter;
+            background-color: rgba(0,0,0,0);
+            border: none;
+            border-bottom: 1px solid $cyan;
+            margin-top: 5%;
+            color: $cyan;
+            &:focus{
+              border: none;
+            }
+            @include medium_screen{
+              width: 70%;
+              max-width: 70%;
+              min-width: 70%;
+              height: 10%;
+            }
+          }
+          &:-webkit-input-placeholder{
+            color: #EAEAEA;
+            font-size: 0.3em;
+            letter-spacing: 2px;
+          }
+          .btnSubmit{
+            position: relative;
+            width: 10%;
+            height: 10%;
+            box-sizing: border-box;
+            margin-top: 2%;
+            font-size: 0.35em;
+            border: none;
+            border-radius: 3px;
+            background-color: $cyan;
+            color: $gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+              transform: scale(1.05);
+              box-shadow: 0 0 10px rgb(0,0,0.5);
+            }
+            @include medium_screen{
+              width: 20%;
+              height: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
